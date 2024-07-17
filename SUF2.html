@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            max-width: 1280px;
+            margin: auto;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+
+        @font-face {
+            font-family: Norse-Bold;
+            src: url(Norse-Bold.otf);
+        }
+
+        html {
+            font-family: Norse-Bold;
+        }
+
+        #Right-side {
+            padding-left: 20px;
+        }
+
+        p {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        form {
+            background-color: burlywood;
+            display: flex;
+            /* flex-direction: column; 
+                justify-content: center;
+                position:static; */
+            flex-wrap: wrap;
+        }
+
+        form div {
+            flex-basis: calc(50% - 10px);
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        form div input {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+        }
+
+        input:nth-of-type(2),
+        input:nth-of-type(4),
+        input:nth-of-type(6) {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="image">
+            <img src="Tree.jpg" height="600px" width="300px">
+        </div>
+        <div id="Right-side">
+            <p>
+                Attention! This is not a real online service! But please, still sign up for its' makers benefit.
+                You can sign up right below: Right... Down... There.
+            </p>
+
+            <p>I for one very much think that you should sign up OR login</p>
+            <form id="Inputs">
+                <div id="FN">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name" id="first_name">
+                </div>
+                <div id="LN">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name="last_name" id="last_name">
+                </div>
+                <div id="EM">
+                    <label for="Email">Email:</label>
+                    <input type="email" name="Email" id="email">
+                </div>
+                <div id="PN">
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="number" name="phone_number" id="phone_number">
+                </div>
+                <div id="PS">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div id="CFNPS">
+                    <label for="CPassword">Confirm Password:</label>
+                    <input type="password" name="CPassword" id="ConPassword">
+                </div>
+                <div>
+                    <button type="submit">Create an Account</button>
+                </div>
+            </form>
+            <div id="Login">
+                <p>Already have an Account? <a href="https://google.com">Log In</href>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

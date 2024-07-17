@@ -26,26 +26,42 @@
             font-size: 20px;
          }
          form {
-            padding: 30px;
             background-color:burlywood;
-            display:flex;
-            flex-direction:column;
-            align-items: center;
-
-         }
-         form div input {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-         }
+            flex-direction: column;
+            gap:20px;
+            padding:20px;
 
+         }
+         .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+         }
+         .form-row div {
+            flex: 1;
+         }
+         #label {
+            display: block;
+            margin-bottom: 5px;
+         }
+         input {
+            width: 100%;
+            padding: 5px;
+         }
+         button {
+            align-self: flex-start;
+            margin-top: 20px;
+            padding: 10px 20px;
+         }
+        
 
     </style>
 </head>
 <body>
     <div id="image">
-        <img src="Tree.jpg" height ="600px"
-        width="300px">
+        <img src="Tree.jpg" height ="700px"
+        width="350px">
     </div>
     <div id="Right-side">
         <p>
@@ -55,29 +71,35 @@
 
         <p>I for one very much think that you should sign up OR login</p>
     <form id="Inputs">
-        <div id="FN">
-            <label for="first_name">First Name:</label>
-            <input type="text" name="first_name" id="first_name">
+        <div class="form-row">
+            <div id="FN">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name">
+            </div>
+            <div id="LN">
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="last_name">
+            </div>    
         </div>
-        <div id="LN">
-            <label for="last_name">Last Name:</label>
-            <input type="text" name="last_name" id="last_name">
-        </div>    
-        <div id="EM">
-            <label for="Email">Email:</label>
-            <input type="email" name="Email" id="email">
+        <div class="form-row">
+            <div id="EM">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" id="email">
+            </div>
+            <div id="PN">
+                <label for="phone_number">Phone Number:</label>
+                <input type="number" name="phone_number" id="phone_number">
+            </div>
         </div>
-        <div id="PN">
-            <label for="phone_number">Phone Number:</label>
-            <input type="number" name="phone_number" id="phone_number">
-        </div>
-        <div id="PS">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password">
-        </div>    
-        <div id="CFNPS">
-            <label for="CPassword">Confirm Password:</label>
-            <input type="password" name="CPassword" id="ConPassword">
+        <div class="form-row">
+            <div id="PS">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+            </div>    
+            <div id="CFNPS">
+                <label for="CPassword">Confirm Password:</label>
+                <input type="password" name="CPassword" id="ConPassword">
+            </div>
         </div>
         <button type="submit">Create an Account</button>
     </form>
